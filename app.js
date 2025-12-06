@@ -21,10 +21,17 @@ while( parseInt(guess) !== targetNum) {
             guess = prompt("Invalid guess. Please try again:");
         }
 }
+ const myList = document.querySelector("#newEl");
+    const newList= document.createElement("h2");
 
 if (guess === 'q') {
-    console.log("OK, YOU QUIT!")}
-else{ 
-    console.log("CONGRATS YOU WIN!");
-    console.log(`You got it! It took you ${attempts} guesses`);
+    newList.textContent ="OK, YOU QUIT!";
+    myList.appendChild(newList);
 }
+else{ 
+    newList.innerText = `CONGRATS YOU WIN!
+    
+    You got it! It took you ${attempts} guesses`;
+    myList.appendChild(newList)
+}
+newList.classList.add("newEle");
